@@ -9,6 +9,7 @@ const loginRoutes=require('./routes/loginRoutes')
 const videoDetailsRoutes=require('./routes/videoDetailsRoutes')
 const likeVideoRoutes=require('./routes/likeVideoRoutes')
 const subscribeRoutes=require('./routes/subscribeRoutes')
+const userDetailsRoutes=require('./routes/userDetailsRoutes')
 app.use(express.json());
 
 app.use('/registerUsers',registerUsersRoutes);
@@ -17,6 +18,7 @@ app.use('/videoListing',getVideoListing)
 app.use('/video',videoDetailsRoutes)
 app.use('/likeVideo',likeVideoRoutes)
 app.use('/subscribe',subscribeRoutes)
+app.use('/user',userDetailsRoutes)
 app.use('/login',loginRoutes)
 mongoose.connect("mongodb://127.0.0.1:27017/?readPreference=primary&directConnection=true&ssl=false")
 .then(() =>{

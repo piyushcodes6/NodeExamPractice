@@ -1,5 +1,5 @@
 const express = require('express');
 const {subscribeEducator}=require('../controllers/subscribeController');
 const app = express();
-app.put("/", subscribeEducator)
+app.get("/", subscribeEducator)
 module.exports= app;
