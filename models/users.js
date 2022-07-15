@@ -14,7 +14,12 @@ const userSchema=new mongoose.Schema({
         type:'string',required: true
     },
     contactNumber:{type:'string',required: true},
-    userType:{type:'string',required: true}
+    userType:{type:'string',required: true},
+    videosLiked:{
+        type:'number',
+        default:0
+    }
+
 })
 
 module.exports=mongoose.model('user',userSchema)
