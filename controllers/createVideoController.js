@@ -10,10 +10,11 @@ const createVideo=((req,res) => {
             console.log(err)
           }else{
             educatorDetails=user[0];
-            console.log(educatorDetails)
+            video.educatorUsername=educatorDetails.firstName;
         }
     })
-    video.save(err =>{
+    
+    video.save(err=>{ 
         if(err){
             res.status(400).json(err)
         }else{
@@ -24,10 +25,11 @@ const createVideo=((req,res) => {
                 duration:video.duration,
                 viewCount:video.viewCount,
                 likesCount:video.likesCount,
-                educatorUsername:educatorDetails.firstName,
+                educatorUsername:video.educatorUsername,
                 videoURL:video.videoURL,
                 thumbnailURL:video.thumbnailURL
             }
+            video.save()
             res.status(200).json(data)
         }
                 

@@ -31,6 +31,9 @@ const videoSchema=new mongoose.Schema({
     likesCount:{
         type: 'number',
         default: 0
+    },
+    educatorUsername:{
+        type: 'string'
     }
 })
 
