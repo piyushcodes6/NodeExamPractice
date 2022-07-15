@@ -18,7 +18,8 @@ const userSchema=new mongoose.Schema({
     videosLiked:{
         type:'number',
         default:0
-    }
+    },
+    subscriberEducator:{type:'number',default:0}
 
 })
 
