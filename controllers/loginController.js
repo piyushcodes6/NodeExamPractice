@@ -9,11 +9,13 @@ const userLogin = (req, res) => {
       console.log(err)
     }
     else{
-      for (let index = 0; index < result.length; index++) {
-        if (ReqEmail == result[0].email && ReqPassword == result[0].password) {
-          res.status(200).send('Login Successful')
+  //    console.log(result)
+      for (let i = 0; i<= result.length; i++) {
+        console.log(i)
+        if (ReqEmail == result[i].email && ReqPassword == result[i].password) {
+         return res.status(200).json('Login Successful')
         } else {
-          res.status(400).send('Invalid login Credentials')
+         return res.status(400).json('Invalid login Credentials')
         }
       }
     }
