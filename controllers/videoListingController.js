@@ -1,4 +1,3 @@
-const mongoose = require('mongoose')
 const videoSchema = require('../models/videos')
 const getVideoListing = (req, res) => {
   videoSchema.find({}, (err, video) => {
