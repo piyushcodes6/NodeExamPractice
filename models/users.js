@@ -19,7 +19,7 @@ const userSchema=new mongoose.Schema({
         type:'number',
         default:0
     },
-    subscriberEducator:{type:'number',default:0}
+    subscribedEducator:{type:'number',default:0}
 
 })
 

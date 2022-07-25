@@ -2,20 +2,16 @@ const mongoose = require('mongoose')
 const userSchema = require('../models/users')
 
 const userLogin = (req, res) => {
-  const ReqEmail = req.body.email
-  const ReqPassword = req.body.password
-  userSchema.find({}, (err, result) => {
-    if (err) {
+  const reqEmail = req.body.email
+  const reqPassword = req.body.password
+  userSchema.find({email:reqEmail ,password:reqPassword},(err,user)=>{
+    console.log(user)
+    if(err){
       console.log(err)
-    }
-    else{
-      for (let index = 0; index < result.length; index++) {
-        if (ReqEmail == result[0].email && ReqPassword == result[0].password) {
-          res.status(200).send('Login Successful')
-        } else {
-          res.status(400).send('Invalid login Credentials')
-        }
-      }
+    }else if(user.length ==0){
+      return res.status(404).json("Invalid Login Credentials")
+    }else{
+      return res.status(200).json("login Successfull")
     }
   })
 }
