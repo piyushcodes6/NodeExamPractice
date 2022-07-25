@@ -10,6 +10,8 @@ const videoDetailsRoutes=require('./routes/videoDetailsRoutes')
 const likeVideoRoutes=require('./routes/likeVideoRoutes')
 const subscribeRoutes=require('./routes/subscribeRoutes')
 const userDetailsRoutes=require('./routes/userDetailsRoutes')
+const userUpdateRoutes=require('./routes/updateUserDetailsRoutes')
+const updateVideoRoutes=require('./routes/updateVideoRoutes')
 app.use(express.json());
 
 app.use('/registerUsers',registerUsersRoutes);
@@ -20,6 +22,8 @@ app.use('/likeVideo',likeVideoRoutes)
 app.use('/subscribe',subscribeRoutes)
 app.use('/user',userDetailsRoutes)
 app.use('/login',loginRoutes)
+app.use('/updateUser',userUpdateRoutes)
+app.use('/updateVideo',updateVideoRoutes)
 mongoose.connect("mongodb://127.0.0.1:27017/?readPreference=primary&directConnection=true&ssl=false")
 .then(() =>{
     console.log(`Db connected`);    
