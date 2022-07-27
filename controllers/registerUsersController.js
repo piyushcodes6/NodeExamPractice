@@ -16,7 +16,16 @@ const registerUsers = ((req, res, next) => {
                 if (err) {
                     res.status(400).json({ message: err })
                 } else {
-                    res.status(200).json({ data: user })
+                    const data={
+                        userID:user._id,
+                        email:user.email,
+                        password:user.password,
+                        firstName:user.firstName,
+                        lastName:user.lastName,
+                        contactNumber:user.contactNumber,
+                        userType:user.userType
+                    }
+                    res.status(200).json({data})
                 }
             })
         }
@@ -25,7 +34,16 @@ const registerUsers = ((req, res, next) => {
             if (err) {
                 res.status(400).json({ message: err })
             } else {
-                res.status(200).json({ data: user })
+                const data={
+                    userID:user._id,
+                    email:user.email,
+                    password:user.password,
+                    firstName:user.firstName,
+                    lastName:user.lastName,
+                    contactNumber:user.contactNumber,
+                    userType:user.userType
+                }
+                res.status(200).json({data})
             }
         })
     }
