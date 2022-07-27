@@ -24,11 +24,11 @@ app.use('/user',userDetailsRoutes)
 app.use('/login',loginRoutes)
 app.use('/updateUser',userUpdateRoutes)
 app.use('/updateVideo',updateVideoRoutes)
-mongoose.connect("mongodb://127.0.0.1:27017/?readPreference=primary&directConnection=true&ssl=false")
+mongoose.connect("mongodb+srv://piyushcodes6:piyush1234@cluster0.vi2oi.mongodb.net/NodejsEdyoda?retryWrites=true&w=majority")
 .then(() =>{
     console.log(`Db connected`);    
-}).catch(() =>{
-    console.log(`Error connecting`);
+}).catch((err) =>{
+    console.log(`Error connecting`+err);
 })
 
 
