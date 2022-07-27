@@ -1,1 +1,321 @@
-{"info":{"name":"NodeJs Edyoda Project","schema":"https://schema.getpostman.com/json/collection/v2.1.0/collection.json"},"item":[{"name":"likeVideo","request":{"method":"PUT","url":{"raw":"http://localhost:3333/likeVideo","protocol":"http","host":["localhost:3333"],"path":["likeVideo"],"port":"3333"},"header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","options":{"raw":{"language":"json"}},"raw":"{\n    \"userID\":\"62c4a4fb482741ebd2a30865\",\n    \"videoID\":\"62d10565e32beeca66562375\"\n}"}}},{"name":"videoDetails","request":{"method":"GET","url":{"raw":"http://localhost:3333/video?videoID=62d0f7db93d40676acdab5cf","query":[{"key":"videoID","value":"62d0f7db93d40676acdab5cf"}],"variable":[],"protocol":"http","host":["localhost:3333"],"path":["video"],"port":"3333"},"header":[{"key":"Content-Type","value":"application/json"}]}},{"name":"videoListing","request":{"method":"GET","url":{"raw":"http://localhost:3333/videoListing","protocol":"http","host":["localhost:3333"],"path":["videoListing"],"port":"3333"},"header":[{"key":"Content-Type","value":"application/json"}]}},{"name":"createVideo","request":{"method":"POST","url":{"raw":"http://localhost:3333/createVideo","protocol":"http","host":["localhost:3333"],"path":["createVideo"],"port":"3333"},"header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","options":{"raw":{"language":"json"}},"raw":"{\n \"title\":\"Yoyo\",\n \"description\":\"Presenting the lyrical version of the song #Rangisari from movie #JugJuggJeeyo starring Varun Dhawan, Kiara Advani.\",\n \"duration\":\"4 mins\",\n \"educatorID\":\"62c4a54b4658796b345c21bd\",\n \"videoURL\":\"https://www.youtube.com/watch?v=ANX4UZlW2JA\",\n \"thumbnailURL\":\"https://www.youtube.com/watch?v=ANX4UZlW2JA\"\n}\n"}}},{"name":"login","request":{"method":"POST","url":{"raw":"http://localhost:3333/login","protocol":"http","host":["localhost:3333"],"path":["login"],"port":"3333"},"header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","options":{"raw":{"language":"json"}},"raw":"{\n    \"email\":\"piyushcodes6@gmail.com\",\n    \"password\":\"Dinkachika@991\"\n}"}}},{"name":"registerUsers","request":{"method":"POST","url":{"raw":"http://localhost:3333/registerUsers","protocol":"http","host":["localhost:3333"],"path":["registerUsers"],"port":"3333"},"header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","options":{"raw":{"language":"json"}},"raw":"{\n    \"email\":\"himani@edyoda.com\",\n    \"password\":\"Dinkachika@9911\",\n    \"firstName\":\"Himani\",\n    \"lastName\":\"Goswami\",\n    \"contactNumber\":\"9870484553\",\n    \"userType\":\"educator\"\n}"}}},{"name":"subscribeEducator","request":{"method":"PUT","url":{"raw":"http://localhost:3333/subscribe","protocol":"http","host":["localhost:3333"],"path":["subscribe"],"port":"3333"},"header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","options":{"raw":{"language":"json"}},"raw":"{\n    \"learnerID\":\"62c4a4fb482741ebd2a30865\",\n    \"educatorID\":\"62c4a54b4658796b345c21bd\"\n}"}}},{"name":"userDetails","request":{"method":"GET","url":{"raw":"http://localhost:3333/user?userName=Piyush","query":[{"key":"userName","value":"Piyush"}],"variable":[],"protocol":"http","host":["localhost:3333"],"path":["user"],"port":"3333"},"header":[{"key":"Content-Type","value":"application/json"}]}}]}
+{
+	"info": {
+		"_postman_id": "72028427-59ff-45aa-afb9-a953d60be7a4",
+		"name": "NodeJs Edyoda Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "likeVideo",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userID\":\"62deb6aa205e53411ec54504\",\n    \"videoID\":\"62deabfc5b9dab7f48f2ff8b\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/likeVideo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"likeVideo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "videoDetails",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3333/video?videoID=62de58e73531d90f5235539c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"video"
+					],
+					"query": [
+						{
+							"key": "videoID",
+							"value": "62de58e73531d90f5235539c"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "videoListing",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3333/videoListing",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"videoListing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createVideo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"title\":\"Hey ya\",\n \"description\":\"hey Ya song from karthik calling karthik\",\n \"duration\":\"3 mins\",\n \"educatorID\":\"62de586f3531d90f52355398\",\n \"videoURL\":\"https://www.youtube.com/watch?v=ANX4UZlW2JA\",\n \"thumbnailURL\":\"https://www.youtube.com/watch?v=ANX4UZlW2JA\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/createVideo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"createVideo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"piyushcodes6@gmail.com\",\n    \"password\":\"Dinkachika@9911\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registerUsers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"himani@edyoda.com\",\n    \"password\":\"Dinkachika@9911\",\n    \"firstName\":\"Piyush\",\n    \"lastName\":\"Goswami\",\n    \"contactNumber\":\"9870484553\",\n    \"userType\":\"educator\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/registerUsers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"registerUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "subscribeEducator",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"learnerID\":\"62deb6aa205e53411ec54504\",\n    \"educatorID\":\"62dcd063db3802dc6f4c747f\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/subscribe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"subscribe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userDetails",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3333/user?userName=Piyush",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "userName",
+							"value": "Piyush"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUserDetails",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userID\":\"62dcd079db3802dc6f4c7481\",\r\n    \"firstName\":\"Pingu\",\r\n    \"lastName\":\"Wifey\",\r\n    \"email\":\"pingu@gmail.com\",\r\n    \"contactNumber\":\"9898988\",\r\n    \"userType\" :\"learner\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3333/updateUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"updateUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateVideoDetails",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"videoID\":\"62de58e73531d90f5235539c\",\r\n\"title\":\"Levitating New\",\r\n\"description\":\"Song by Dua Lipa\",\r\n\"duration\":\"4 mins\",\r\n\"educatorUsername\":\"Mickey\",\r\n\"videoURL\":\"https://www.youtube.com/watch?v=ANX4UZlW2JA\",\r\n\"thumbnailURL\":\"https://www.youtube.com/watch?v=ANX4UZlW2JA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/updateVideo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"updateVideo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
